@@ -6,11 +6,6 @@
     width: 100%;
     flex: 0 0 100%;
     align-self: stretch;
-    transition: transform 260ms ease;
-}
-
-body.sidebar-open .site-navbar {
-    transform: translateX(var(--sidebar-nav-push, 0px));
 }
 
 .site-navbar .site-header,
@@ -82,6 +77,14 @@ body.sidebar-open .site-navbar {
     z-index: 4;
     flex: 1 1 auto;
     justify-content: flex-end;
+}
+
+.site-navbar > header > .container > nav {
+    transition: transform 260ms ease;
+}
+
+body.sidebar-open .site-navbar > header > .container > nav {
+    transform: translateX(var(--sidebar-nav-push, 0px));
 }
 
 .site-navbar nav .navbar {
