@@ -4,177 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Japan Drifts </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="JAPAN.png"/>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="icon" href="assets/images/JAPAN.png"/>
+    <link rel="stylesheet" href="assets/css/navbar.css">
+
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
-<body>
-    <header>  
-        <div class="container">  
-            <a href="index.html">    
-                <img src="JAPAN.png" class="logo">  
-            </a>  
-            <h1>JAPAN DRIFTS</h1>  
-            <nav>  
-                <div class="navbar">  
-                    <ul>  
-                        <li><a href="#">Car Brands</a>  
-                            <ul class="submenu">  
-                                <li><a href="Toyota.html">Toyota</a></li> 
-                                <li><a href="Mazda.html">Mazda</a></li>
-                                <li><a href="Honda.html">Honda</a></li>  
-                                <li><a href="Mitsubishi.html">Mitsubishi</a></li>  
-                                <li><a href="Lexus.html">Lexus</a></li>  
-                                <li><a href="Subaru.html">Subaru</a></li>  
-                                <li><a href="Nissan.html">Nissan</a></li> 
-                            </ul>  
-                        </li>  
-                        <li><a href="Essential.html">Essentials</a></li>  
-                        <li><a href="Streetwear.html">Streetwear</a></li>    
-                        <li><a href="#" onclick="toggleSidebar('sidebar-more')">More</a></li> 
-                    </ul>  
-                </div>  
-                <div>
-                    <ul class="submenu1">  
-                        <li><a href="log.html">Sign In / Sign Up</a></li> 
-                    </ul>  
-                </div>
-            </nav>
-        </div>  
-    </header>  
-      
+<body class="home-page">
+    <site-navbar data-root=""></site-navbar>
+
     <main>
-        <section class="banner">
-            <div class="video-container">
-                <img src="https://4kwallpapers.com/images/wallpapers/toyota-supra-mk4-2880x1800-14566.jpg" class="video-poster">
-                <iframe id="youtube-video" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> JAPANESE CAR CULTURE, IN MOTION</p>
+                <h1 id="hero-title">BUILT TO<br>MOVE YOU<span>.</span></h1>
+                <p class="hero-description">From legendary JDM machines to the culture built around them. Find your next obsession.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#featured-cars">Explore the collection</a>
+                    <a class="button button-quiet" href="pages/Story.html">Our story</a>
+                </div>
+                <div class="hero-meta">
+                    <span>01 <i></i> 07</span>
+                    <span>THE SPIRIT OF THE STREETS</span>
+                </div>
             </div>
+            <div class="hero-art" aria-hidden="true">
+                <span class="hero-orbit"></span>
+                <span class="hero-index">SUPRA <strong>MK IV</strong></span>
+                <img class="hero-car" src="assets/images/Supra-removebg-preview.png" alt="">
+                <span class="hero-caption">JDM <b>LEGEND</b></span>
+            </div>
+            <a class="scroll-cue" href="#featured-brands"><span></span> SCROLL TO EXPLORE</a>
         </section>
-        
-        <section class="featured-products">  
-            <h2 class="ess">Featured Brands</h2>  
-            <div class="product-list">  
-                <div class="product-item" data-info="Nissan Motor Co., Ltd., Japanese industrial corporation that manufactures automobiles, trucks, and buses under the names Nissan and Datsun. The company also designs and manufactures such products as communications satellites, pleasure boats, and machinery. Headquarters are in Tokyo.">  
-                    <img src="nissan-removebg-preview.png" class="product-logo">  
-                    <p>Nissan</p>  
-                </div>  
-                <div class="product-item" data-info="Toyota is known for its high-quality and dependable vehicles. Toyota cars are reliable, durable, and built to last. From their sturdy engines to their reliable transmissions, Toyota cars offer a high level of quality that can be trusted.">  
-                    <img src="toyota.png" class="product-logo">  
-                    <p>Toyota</p>  
-                </div>  
-                <div class="product-item" data-info="The Honda we know and love is the product of its founder's dedication to innovation. This world-renowned carmaker produces several popular new models, including CR-V, Pilot, and Odyssey. Its reputation for building durable, efficient, and stylish cars has earned people's trust across the globe.">  
-                    <img src="honda-removebg-preview.png" class="product-logo">  
-                    <p>Honda</p>  
-                </div>  
-            </div>  
-        </section>  
-        <section id="FC" class="featured-products">  
-            <h2 class="ess">Featured Cars</h2>  
-            <div class="product-list">  
-                <div class="product-item1" data-info="The Nissan Skyline GT-R R34 is an iconic Japanese sports car known for its performance and styling">  
-                    <img src="Skyline-removebg-preview.png" class="product-logo">  
-                    <p>Nissan Skyline GT-R R34</p>  
-                </div>  
-                <div class="product-item1" data-info="The Toyota Supra MK4 is a legendary sports car celebrated for its turbocharged performance and timeless design">  
-                    <img src="Supra-removebg-preview.png" class="product-logo">  
-                    <p>Toyota Supra MK4</p>  
-                </div>  
-                <div class="product-item1" data-info="The Honda Integra Type R is a high-performance variant of the Honda Integra known for its agile handling and VTEC engine">  
-                    <img src="Integra-removebg-preview.png" class="product-logo">  
-                    <p>Honda Integra Type R</p>  
-                </div>  
-            </div>  
-        </section>  
-    </main> 
-    <aside id="sidebar-more" class="sidebar">
-        <span class="close-button" onclick="toggleSidebar('sidebar-more')">X</span>
-        <h2>More Options</h2>
-        <ul>
-            <li><a href="FAQ.html"><div class="sidebar-link">FAQ</div></a></li> 
-            <li><a href="About.html"><div class="sidebar-link">About Us</div></a></li> 
-            <li><a href="Story.html"><div class="sidebar-link">Our Story</div></a></li>  
-            <li><a href="Vision.html"><div class="sidebar-link">Vision & Mission</div></a></li>     
-        </ul>
-    </aside>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: <a href="mailto:202310398@fit.edu.ph">202310398@fit.edu.ph</a></li>
-                    <li>Phone: <a href="tel:+63 966 703 6969">(+63) 966-703-6969</a></li>
-                    <li>Address: 69 Curve St., Tokyo, Japan</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Prismalcs/">Facebook</a></li>
-                    <li><a href="https://x.com/Japan_Drifts">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/prsm_lcs/">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-logo">
-                <img src="JAPAN.png" alt="Logo">
-            </div>
+
+        <div class="home-content">
+            <section id="featured-brands" class="showcase-section" aria-labelledby="brands-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> THE MAKERS</p>
+                        <h2 id="brands-title">Icons of the <em>road.</em></h2>
+                    </div>
+                    <a class="text-link" href="pages/Toyota.html">Explore all brands</a>
+                </div>
+                <div class="brand-grid">
+                    <a class="brand-card" href="pages/Nissan.html">
+                        <span class="card-number">01 / NISSAN</span>
+                        <img src="assets/images/nissan-removebg-preview.png" alt="Nissan logo">
+                        <span class="card-label">Precision. Power. Legacy.</span>
+                    </a>
+                    <a class="brand-card" href="pages/Toyota.html">
+                        <span class="card-number">02 / TOYOTA</span>
+                        <img src="assets/images/toyota.png" alt="Toyota logo">
+                        <span class="card-label">Built for the long run.</span>
+                    </a>
+                    <a class="brand-card" href="pages/Honda.html">
+                        <span class="card-number">03 / HONDA</span>
+                        <img src="assets/images/honda-removebg-preview.png" alt="Honda logo">
+                        <span class="card-label">Engineered to excite.</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="featured-cars" class="showcase-section car-section" aria-labelledby="cars-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span></span> THE MACHINES</p>
+                        <h2 id="cars-title">Made to be <em>remembered.</em></h2>
+                    </div>
+                    <span class="section-note">A few of our all-time favorites</span>
+                </div>
+                <div class="car-grid">
+                    <a class="car-card" href="pages/Nissan.html">
+                        <span class="car-number">01</span>
+                        <img src="assets/images/Skyline-removebg-preview.png" alt="Nissan Skyline GT-R R34">
+                        <span class="car-details"><span>NISSAN · 1999–2002</span><strong>Skyline GT-R <i>R34</i></strong></span>
+                    </a>
+                    <a class="car-card" href="pages/Toyota.html">
+                        <span class="car-number">02</span>
+                        <img src="assets/images/Supra-removebg-preview.png" alt="Toyota Supra MK4">
+                        <span class="car-details"><span>TOYOTA · 1993–2002</span><strong>Supra <i>MK IV</i></strong></span>
+                    </a>
+                    <a class="car-card" href="pages/Honda.html">
+                        <span class="car-number">03</span>
+                        <img src="assets/images/Integra-removebg-preview.png" alt="Honda Integra Type R">
+                        <span class="car-details"><span>HONDA · 1995–2001</span><strong>Integra <i>Type R</i></strong></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="culture-callout" aria-labelledby="culture-title">
+                <div>
+                    <p class="eyebrow"><span></span> MORE THAN THE DRIVE</p>
+                    <h2 id="culture-title">Wear the culture.<br><em>Live the lifestyle.</em></h2>
+                </div>
+                <div class="culture-links">
+                    <a href="pages/Streetwear.html">Shop streetwear</a>
+                    <a href="pages/Essential.html">Find your essentials</a>
+                </div>
+            </section>
         </div>
-        <div class="footer-info">
-            <p>By Jaymard Licas</p>
-            <p>© 2024 JAPAN DRIFTS. All rights reserved.</p>
-        </div>
-    </footer>
-    
-    
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const videoContainer = document.querySelector('.video-container');
-    const videoPoster = document.querySelector('.video-poster');
-    const youtubeVideo = document.getElementById('youtube-video');
-    let timeoutId;
+    </main>
+    <site-sidebar data-root=""></site-sidebar>
+    <site-footer data-root=""></site-footer>
 
-    function playVideo() {
-        videoPoster.classList.add('fade-out');
-        setTimeout(() => {
-            videoPoster.style.display = 'none';
-            youtubeVideo.classList.add('fade-in');
-            youtubeVideo.style.display = 'block';
-            youtubeVideo.src = "https://www.youtube.com/embed/tKqq6SAb_1M?autoplay=1&start=174&controls=0&modestbranding=1&disablekb=1&showinfo=0&rel=0&iv_load_policy=3";
-        }, 1000); 
-    }
+    <script src="assets/js/navbar.js"></script>
 
-    function checkVisibility() {
-        const rect = videoContainer.getBoundingClientRect();
-        const isVisible = (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-
-        if (isVisible) {
-            timeoutId = setTimeout(playVideo, 1500);
-        } else {
-            clearTimeout(timeoutId);
-        }
-    }
-
-    window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('resize', checkVisibility);
-
-    checkVisibility();  
-});
-
-        function toggleSidebar(sidebarId) {
-            const sidebar = document.getElementById(sidebarId);
-            const isActive = sidebar.classList.contains('active');
-            
-            document.querySelectorAll('.sidebar').forEach(function(sidebar) {
-                sidebar.classList.remove('active');
-            });
-            
-            if (!isActive) {
-                sidebar.classList.add('active');
-            }
-        }
-    </script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/footer.js"></script>
 </body>
 </html>
