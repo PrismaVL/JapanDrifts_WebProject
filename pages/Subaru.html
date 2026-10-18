@@ -4,630 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subaru - Japan Drifts</title>
-    <link rel="icon" href="JAPAN.png"/>
+    <link rel="icon" href="../assets/images/JAPAN.png"/>
+<link rel="stylesheet" href="../assets/css/sidebar.css">
 
-    <style>
-        body {
-             font-family: 'Courier New', Courier, monospace;
-             margin: 0;
-             padding: 0;
-         }
-         
-         h1 {
-             text-decoration: none;
-             text-shadow: 1px 2px rgb(153, 227, 250);
-         }
-        
-         header {
-             border: 2px solid #333;
-             background-color: #000;
-             padding: 10px 0;
-             text-align: center;
-             margin-bottom: -1px;
-         }
-         
-         .container {
-             display: flex;
-             justify-content: flex-start;
-             align-items: center;
-             padding: 0 20px;
-         }
-         
-         .logo {
-             width: 50px;
-             height: auto;
-             margin-right: 10px;
-         }
-         
-         header h1 {
-             margin: 0;
-             color: #fff;
-             flex: 1;
-             text-align: left;
-         }
-        
-         nav {
-             flex: 2;
-             display: flex;
-             justify-content: center;
-             z-index: 2;
-         }
-         
-         nav ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-             display: flex;
-         }
-         
-         nav ul li {
-             position: relative;
-             margin: 0 10px;
-         }
-         
-         nav ul li a {
-             color: #fff;
-             text-decoration: none;
-             display: block;
-             padding: 10px;
-         }
-         
-         nav ul li:hover {
-             background-color: #555;
-         }
-         
-         nav ul ul {
-             position: absolute;
-             left: -5px;
-             top: 100%;
-             background-color: rgba(0, 0, 0, 0.7);
-             padding: 5px;
-             margin: 0;
-             list-style-type: none;
-             width: 543px;
-             opacity: 0;
-             visibility: hidden;
-             transition: opacity 0.3s ease, visibility 0.3s ease;
-         }
-         
-         nav ul li:hover > ul {
-             opacity: 1;
-             visibility: visible;
-         }
-         
-         nav ul ul li {
-             margin: 0;
-             padding: 0;
-         }
-         
-         nav ul ul li a {
-             padding: 5px 10px;
-         }
-        
-         .featured-products {
-             padding: 20px;
-             text-align: center;
-         }
-         
-         .featured-products h2 {
-             margin-bottom: 20px;
-         }
-         
-         .product-list {
-             display: flex;
-             justify-content: center;
-             flex-wrap: wrap;
-             gap: 20px;
-             margin-top: 20px; 
-             margin-bottom: 20px;
-         }
-        
-         .row {
-             display: flex;
-             justify-content: center;
-             gap: 20px;
-             width: 100%;
-         }
-         
-         .product-item {
-             width: calc(30% - 15px); 
-             height: 215px;
-             padding: 20px;
-             border: 2px solid #ccc;
-             border-radius: 10px;
-             background-color: #fff;
-             text-align: center;
-             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-             position: relative;
-             overflow: hidden;
-             transition: transform 0.3s ease, box-shadow 0.3s ease; 
-         }
-         
-        
-         .product-item {
-             position: relative;
-             z-index: 1; 
-         }
-        
-         @media (max-width: 768px) {
-             .product-item {
-                 width: calc(50% - 20px); 
-             }
-         }
-         
-         .product-item img {
-             width: 100px;
-             height: auto;
-             margin-bottom: 10px;
-             transition: transform 0.3s ease; 
-         }
-         
-         .product-item p {
-             margin: 10px 0;
-         }
-         
-        
-         .product-item .button-container {
-             display: flex;
-             justify-content: center;
-         }
-         
-         .product-item button {
-             padding: 10px 15px;
-             background-color: #007BFF;
-             color: #fff;
-             border: none;
-             border-radius: 5px;
-             cursor: pointer;
-             margin-top: 10px;
-         }
-         
-         .product-item:hover {
-             transform: scale(1.05); 
-             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-         }
-        
-         .product-item:hover img {
-             transform: scale(1.2); 
-         }
-        
-        .sidebar {
-             position: fixed;
-             right: -270px;
-             top: 0;
-             width: 230px;
-             height: 100%;
-             background-color: rgba(51, 51, 51, 0.8); 
-             color: #fff;
-             transition: right 0.3s ease;
-             padding: 20px;
-             box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-             overflow-y: auto;
-             line-height: 25px;
-             z-index: 2;
-         }
-         
-         .sidebar.active {
-             right: 0; 
-         }
-         
-         .sidebar h2 {
-             margin-top: 0;
-         }
-         
-         .sidebar ul {
-             list-style-type: none;
-             padding: 0;
-             line-height: 50px;
-         }
-         
-         .sidebar ul li {
-             margin: 10px 0;
-             padding: 10px 0;
-             border-bottom: 1px solid #fff;
-             cursor: pointer;
-         }
-         
-         .sidebar ul li a {
-             color: #fff;
-             text-decoration: none;
-             display: block; 
-         }
-         
-         .sidebar ul li:hover .sidebar-link {
-             background-color: #555; 
-         }
-         
-         .sidebar-link {
-             padding: 10px;
-         }
-         
-         
-         .close-button {
-             position: absolute;
-             top: 10px;
-             right: 10px;
-             cursor: pointer;
-             font-size: 18px;
-             color: #fff;
-         }
-        
-         footer {
-             bottom: 0;
-             width: 100%;
-             background-color: #000;
-             color: white;
-             text-align: center;
-         }
-         
-         .footer-container {
-             display: flex;
-             flex-wrap: wrap;
-             justify-content: space-between;
-             align-items: center;
-             max-width: 1200px;
-             margin: 0 auto;
-             padding: 0 20px;
-         }
-         
-         .footer-column {
-             flex: 1;
-             margin: 20px 10px;
-             min-width: 200px;
-             text-align: left;
-         }
-         
-         .footer-column h3 {
-             color: white;
-             text-shadow: 1px 2px red;
-             margin-bottom: 10px;
-         }
-         
-         .footer-column ul {
-             list-style-type: none;
-             padding: 0;
-         }
-         
-         .footer-column ul li {
-             margin: 5px 0;
-         }
-         
-         .footer-column ul li a {
-             color: white;
-             text-decoration: none;
-         }
-         
-         .footer-logo {
-             flex: 1;
-             margin: 20px;
-             text-align: center;
-         }
-         
-         .footer-logo img {
-             height: 150px;
-             width: auto;
-         }
-         
-         .footer-info {
-             width: 100%;
-             text-align: center;
-             border-top: 1px solid #333;
-             height: 100px;
-         }
-         
-         @media (max-width: 768px) {
-             .footer-container {
-                 flex-direction: column;
-                 align-items: flex-start;
-             }
-         
-             .footer-column,
-             .footer-logo {
-                 width: 100%;
-                 text-align: center;
-                 margin: 10px 0;
-             }
-         }
-         
-         .modal {
-             justify-content: center;
-             align-items: center;
-             display: none;
-             position: fixed;
-             top: 0px;
-             left: 0;
-             width: 100%;
-             height: 100%;
-             background-color: rgba(0, 0, 0, 0.7);
-             justify-content: center;
-             align-items: center;
-             z-index: 3;
-         }
-         
-         .modal-content {
-             background-color: #fff;
-             padding: 20px;
-             border-radius: 10px;
-             width: 80%;
-             position: relative;
-             top: 250px;
-             max-width: 600px;
-             text-align: center;
-             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-             margin: 0 auto; 
-         }
-         
-         .modal-content img {
-             width: 200px;
-             height: auto;
-             margin-bottom: 10px;
-         }
-         
-         .modal-content button {
-             padding: 10px 20px;
-             background-color: #007BFF;
-             color: #fff;
-             border: none;
-             border-radius: 5px;
-             cursor: pointer;
-         }
-         
-         .modal-content button:hover {
-             background-color: #0056b3;
-         }
-         
-         .close-modal {
-             position: absolute;
-             top: 10px;
-             right: 10px;
-             font-size: 24px;
-             cursor: pointer;
-         }
-         
-         .fade-out {
-             opacity: 0;
-             transition: opacity 1s ease;
-         }
-         
-         .fade-in {
-             opacity: 1;
-             transition: opacity 1s ease;
-         }
-        
-        .overlay {
-             display: none;
-             position: fixed;
-             z-index: 4;
-             left: 0;
-             top: 0;
-             width: 100%;
-             height: 100%;
-             background-color: rgba(0, 0, 0, 0.7);
-             justify-content: center;
-             align-items: center;
-             text-align: center;
-         }
-         
-         .overlay-content {
-             background-color: #fff;
-             padding: 20px;
-             border-radius: 10px;
-             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-             width: 80%;
-             max-width: 400px;
-         }
-         
-         .close-btn {
-             color: #aaa;
-             font-size: 28px;
-             font-weight: bold;
-             float: right;
-         }
-         
-         .close-btn:hover,
-         .close-btn:focus {
-             color: #000;
-             text-decoration: none;
-             cursor: pointer;
-         }    
-            </style>
+    <link rel="stylesheet" href="../assets/css/navbar.css">
 
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/brands.css">
 </head>
-<body>
-    <header>  
-        <div class="container">  
-            <a href="index.html">    
-                <img src="JAPAN.png" class="logo">  
-            </a>  
-            <h1>JAPAN DRIFTS</h1>  
-            <nav>  
-                <div class="navbar">  
-                    <ul>  
-                         <li><a href="index.html">Home</a>  
-                        <li><a href="#">Car Brands</a>  
-                            <ul class="submenu">  
-                                <li><a href="Toyota.html">Toyota</a></li> 
-                                <li><a href="Mazda.html">Mazda</a></li>
-                                <li><a href="Honda.html">Honda</a></li>  
-                                <li><a href="Mitsubishi.html">Mitsubishi</a></li>  
-                                <li><a href="Lexus.html">Lexus</a></li>  
-                                <li><a href="Subaru.html">Subaru</a></li>  
-                                <li><a href="Nissan.html">Nissan</a></li> 
-                            </ul>  
-                        </li>  
-                        <li><a href="Essential.html">Essentials</a></li>  
-                        <li><a href="Streetwear.html">Streetwears</a></li>    
-                        <li><a href="#" onclick="toggleSidebar('sidebar-more')">More</a></li> 
-                    </ul>  
-                </div>  
-            </nav>
-        </div>  
-    </header>  
+<body class="brand-page">
+    <site-navbar data-root="../"></site-navbar>
 
-    <div class="product-list">
-     <div class="product-item">
-          <img src="WRX.png" class="product-logo">
-          <p>Subaru Impreza WRX STI (GC8, GD, GR, VA)</p>
-          <div class="button-container">
-              <button onclick="showDetails('Subaru Impreza WRX STI', 'The Subaru Impreza WRX STI is a rally-inspired sedan known for its turbocharged performance and AWD capability. Specifications: Engine: 2.5L Turbocharged Boxer, Power: 305 hp, Torque: 290 lb-ft, 0-60 mph: 4.9 seconds', 'wrx.png')">View Details</button>
-          </div>
-      </div>
-
-      <div class="product-item">
-          <img src="legacy.png" class="product-logo">
-          <p>Subaru Legacy GT/B Spec.B</p>
-          <div class="button-container">
-              <button onclick="showDetails('Subaru Legacy GT/B Spec.B', 'The Subaru Legacy GT/B Spec.B is a sporty sedan known for its turbocharged engine and all-wheel-drive system. Specifications: Engine: 2.5L Turbocharged Boxer, Power: 250 hp, Torque: 250 lb-ft, 0-60 mph: 5.5 seconds', 'legacy.png')">View Details</button>
-          </div>
-      </div>
-
-      <div class="product-item">
-          <img src="forester.png" class="product-logo">
-          <p>Subaru Forester STI</p>
-          <div class="button-container">
-              <button onclick="showDetails('Subaru Forester STI', 'The Subaru Forester STI is a high-performance SUV known for its turbocharged engine and rugged design. Specifications: Engine: 2.5L Turbocharged Boxer, Power: 265 hp, Torque: 235 lb-ft, 0-60 mph: 6.3 seconds', 'forester.png')">View Details</button>
-          </div>
-      </div>
-
-      <div class="product-item">
-          <img src="brz.png" class="product-logo">
-          <p>Subaru BRZ (and Toyota 86)</p>
-          <div class="button-container">
-              <button onclick="showDetails('Subaru BRZ', 'The Subaru BRZ and Toyota 86 are lightweight sports cars known for their rear-wheel-drive layout and agile handling. Specifications: Engine: 2.0L Boxer, Power: 205 hp, Torque: 156 lb-ft, 0-60 mph: 6.2 seconds', 'brz.png')">View Details</button>
-          </div>
-      </div>
- 
-      <div class="product-item">
-          <img src="outback.png" class="product-logo">
-          <p>Subaru Outback XT</p>
-          <div class="button-container">
-              <button onclick="showDetails('Subaru Outback XT', 'The Subaru Outback XT is a rugged crossover known for its all-terrain capability and spacious interior. Specifications: Engine: 2.4L Turbocharged Boxer, Power: 260 hp, Torque: 277 lb-ft, Ground Clearance: 8.7 inches', 'outback.png')">View Details</button>
-          </div>
-      </div>
-
-      <div class="product-item">
-          <img src="svx.png" class="product-logo">
-          <p>Subaru SVX</p>
-          <div class="button-container">
-              <button onclick="showDetails('Subaru SVX', 'The Subaru SVX is a grand tourer known for its unique design and smooth flat-six engine. Specifications: Engine: 3.3L Flat-Six, Power: 231 hp, Torque: 228 lb-ft, Top Speed: 154 mph', 'svx.png')">View Details</button>
-          </div>
-      </div>
-
- </div>
+    <main class="brand-catalog">
+        <header class="brand-heading">
+            <div>
+                <p class="brand-kicker">Japan Drifts / The Collection</p>
+                <h1>Subaru Classics</h1>
+            </div>
+            <p>Iconic Japanese performance, with the essential specs right where you need them.</p>
+        </header>
+        <section class="vehicle-grid" aria-label="Subaru vehicle collection">
+            <article class="vehicle-card">
+                <div class="vehicle-card-art">
+                    <img src="../assets/images/WRX.png" alt="Subaru Impreza WRX STI (GC8, GD, GR, VA)" loading="lazy">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2>Subaru Impreza WRX STI (GC8, GD, GR, VA)</h2>
+                    <p class="vehicle-description">The Subaru Impreza WRX STI is a rally-inspired sedan known for its turbocharged performance and AWD capability.</p>
+                    <dl class="vehicle-specs">
+                    <div><dt>Engine</dt><dd>2.5L Turbocharged Boxer</dd></div>
+                    <div><dt>Power</dt><dd>305 hp</dd></div>
+                    <div><dt>Torque</dt><dd>290 lb-ft</dd></div>
+                    <div><dt>0-60 mph</dt><dd>4.9 seconds</dd></div>
+                    </dl>
+                    <button class="vehicle-buy-button" type="button" data-buy-vehicle>Buy this vehicle</button>
+                </div>
+            </article>
+            <article class="vehicle-card">
+                <div class="vehicle-card-art">
+                    <img src="../assets/images/legacy.png" alt="Subaru Legacy GT/B Spec.B" loading="lazy">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2>Subaru Legacy GT/B Spec.B</h2>
+                    <p class="vehicle-description">The Subaru Legacy GT/B Spec.B is a sporty sedan known for its turbocharged engine and all-wheel-drive system.</p>
+                    <dl class="vehicle-specs">
+                    <div><dt>Engine</dt><dd>2.5L Turbocharged Boxer</dd></div>
+                    <div><dt>Power</dt><dd>250 hp</dd></div>
+                    <div><dt>Torque</dt><dd>250 lb-ft</dd></div>
+                    <div><dt>0-60 mph</dt><dd>5.5 seconds</dd></div>
+                    </dl>
+                    <button class="vehicle-buy-button" type="button" data-buy-vehicle>Buy this vehicle</button>
+                </div>
+            </article>
+            <article class="vehicle-card">
+                <div class="vehicle-card-art">
+                    <img src="../assets/images/forester.png" alt="Subaru Forester STI" loading="lazy">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2>Subaru Forester STI</h2>
+                    <p class="vehicle-description">The Subaru Forester STI is a high-performance SUV known for its turbocharged engine and rugged design.</p>
+                    <dl class="vehicle-specs">
+                    <div><dt>Engine</dt><dd>2.5L Turbocharged Boxer</dd></div>
+                    <div><dt>Power</dt><dd>265 hp</dd></div>
+                    <div><dt>Torque</dt><dd>235 lb-ft</dd></div>
+                    <div><dt>0-60 mph</dt><dd>6.3 seconds</dd></div>
+                    </dl>
+                    <button class="vehicle-buy-button" type="button" data-buy-vehicle>Buy this vehicle</button>
+                </div>
+            </article>
+            <article class="vehicle-card">
+                <div class="vehicle-card-art">
+                    <img src="../assets/images/brz.png" alt="Subaru BRZ (and Toyota 86)" loading="lazy">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2>Subaru BRZ (and Toyota 86)</h2>
+                    <p class="vehicle-description">The Subaru BRZ and Toyota 86 are lightweight sports cars known for their rear-wheel-drive layout and agile handling.</p>
+                    <dl class="vehicle-specs">
+                    <div><dt>Engine</dt><dd>2.0L Boxer</dd></div>
+                    <div><dt>Power</dt><dd>205 hp</dd></div>
+                    <div><dt>Torque</dt><dd>156 lb-ft</dd></div>
+                    <div><dt>0-60 mph</dt><dd>6.2 seconds</dd></div>
+                    </dl>
+                    <button class="vehicle-buy-button" type="button" data-buy-vehicle>Buy this vehicle</button>
+                </div>
+            </article>
+            <article class="vehicle-card">
+                <div class="vehicle-card-art">
+                    <img src="../assets/images/outback.png" alt="Subaru Outback XT" loading="lazy">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2>Subaru Outback XT</h2>
+                    <p class="vehicle-description">The Subaru Outback XT is a rugged crossover known for its all-terrain capability and spacious interior.</p>
+                    <dl class="vehicle-specs">
+                    <div><dt>Engine</dt><dd>2.4L Turbocharged Boxer</dd></div>
+                    <div><dt>Power</dt><dd>260 hp</dd></div>
+                    <div><dt>Torque</dt><dd>277 lb-ft</dd></div>
+                    <div><dt>Ground Clearance</dt><dd>8.7 inches</dd></div>
+                    </dl>
+                    <button class="vehicle-buy-button" type="button" data-buy-vehicle>Buy this vehicle</button>
+                </div>
+            </article>
+            <article class="vehicle-card">
+                <div class="vehicle-card-art">
+                    <img src="../assets/images/svx.png" alt="Subaru SVX" loading="lazy">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2>Subaru SVX</h2>
+                    <p class="vehicle-description">The Subaru SVX is a grand tourer known for its unique design and smooth flat-six engine.</p>
+                    <dl class="vehicle-specs">
+                    <div><dt>Engine</dt><dd>3.3L Flat-Six</dd></div>
+                    <div><dt>Power</dt><dd>231 hp</dd></div>
+                    <div><dt>Torque</dt><dd>228 lb-ft</dd></div>
+                    <div><dt>Top Speed</dt><dd>154 mph</dd></div>
+                    </dl>
+                    <button class="vehicle-buy-button" type="button" data-buy-vehicle>Buy this vehicle</button>
+                </div>
+            </article>
         </section>
     </main>
-    
-    <aside id="sidebar-more" class="sidebar">
-        <span class="close-button" onclick="toggleSidebar('sidebar-more')">X</span>
-        <h2>More Options</h2>
-        <ul>
-            <li><a href="FAQ.html"><div class="sidebar-link">FAQ</div></a></li> 
-            <li><a href="About.html"><div class="sidebar-link">About Us</div></a></li> 
-            <li><a href="Story.html"><div class="sidebar-link">Our Story</div></a></li>  
-            <li><a href="Vision.html"><div class="sidebar-link">Vision & Mission</div></a></li>     
-        </ul>
-    </aside>
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: <a href="mailto:202310398@fit.edu.ph">202310398@fit.edu.ph</a></li>
-                    <li>Phone: <a href="tel:+63 966 703 6969">(+63) 966-703-6969</a></li>
-                    <li>Address: 69 Curve St., Tokyo, Japan</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Prismalcs/">Facebook</a></li>
-                    <li><a href="https://x.com/Japan_Drifts">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/prsm_lcs/">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-logo">
-                <img src="JAPAN.png">
-            </div>
+    <div class="brand-purchase-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Purchase confirmation">
+        <div class="brand-purchase-dialog">
+            <button class="brand-purchase-close" type="button" data-close-purchase aria-label="Close">&times;</button>
+            <p>Thank you for purchasing at Japan Drifts!</p>
+            <p>Vehicle will arrive shortly at your garage.</p>
         </div>
-        <div class="footer-info">
-            <p>By Jaymard Licas</p>
-            <p>© 2024 JAPAN DRIFTS. All rights reserved.</p>
-        </div>
-    </footer>
-    
+    </div>
 
-    <div id="car-modal" class="modal">
-     <div class="modal-content">
-         <span class="close-modal" onclick="closeModal()">&times;</span>
-         <h2 id="car-modal-title"></h2>
-         <img id="car-modal-image" src="">
-         <p id="car-modal-description"></p>
-         <button id="buy-now-button" onclick="showOverlay()">Buy Now</button>
-     </div>
- </div>
+    <site-sidebar data-root="../"></site-sidebar>
+    <site-footer data-root="../"></site-footer>
 
- <div class="overlay" id="overlay">
-  <div class="overlay-content">
-      <span class="close-btn" onclick="closeOverlay()">&times;</span>
-      <p>Thank you for purchasing at Japan Drifts!</p> 
-      <p>Vehicle will arrive shortly at your garage.</p>
-  </div>
-</div>
-
-
- <script>
-     function toggleSidebar(sidebarId) {
-         const sidebar = document.getElementById(sidebarId);
-         const isActive = sidebar.classList.contains('active');
-
-         document.querySelectorAll('.sidebar').forEach(function(sidebar) {
-             sidebar.classList.remove('active');
-         });
-
-         if (!isActive) {
-             sidebar.classList.add('active');
-         }
-     }
-
-     function showDetails(title, description, image) {
-         const modal = document.getElementById('car-modal');
-         const titleElement = document.getElementById('car-modal-title');
-         const descriptionElement = document.getElementById('car-modal-description');
-         const imageElement = document.getElementById('car-modal-image');
-
-         titleElement.textContent = title;
-         descriptionElement.textContent = description;
-         imageElement.src = image;
-
-         modal.style.display = 'block';
-     }
-
-     function closeModal() {
-         const modal = document.getElementById('car-modal');
-         modal.style.display = 'none';
-     }
-
-     function showOverlay() {
- const modal = document.getElementById('car-modal');
- const overlay = document.getElementById('overlay');
-
-
- if (modal.style.display === 'block') {
-     closeModal();
- }
-
- overlay.style.display = 'flex';
-}
-
-function closeOverlay() {
- const modal = document.getElementById('car-modal');
- const overlay = document.getElementById('overlay');
-
-
- modal.style.display = 'none';
- overlay.style.display = 'none';
-}
- </script>
+    <script src="../assets/js/brand-catalog.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>
