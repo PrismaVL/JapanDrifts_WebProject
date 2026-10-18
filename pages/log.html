@@ -3,258 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Account - Japan Drifts</title>
     <link rel="icon" href="../assets/images/JAPAN.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            text-decoration: none;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #000;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        header {
-            width: 100%;
-            border: 2px solid #333;
-            background-color: #000;
-            padding: 10px 0;
-            text-align: center;
-            color: white;
-        }
-        .container1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            font-family: 'Courier New', Courier, monospace;
-            text-shadow: 1px 2px rgb(153, 227, 250);
-        }
-        .logo {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-        form {
-            padding: 30px 30px;
-            background-color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            border: 2px solid black;
-            border-radius: 20px;
-            width: 500px;
-            margin: 40px 0;
-            position: relative;
-        }
-
-        form h2 {
-            font-weight: 500;
-            font-size: 1.50em;
-            letter-spacing: 0.1em;
-            margin-bottom: 20px;
-        }
-        .inputbox {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        .inputbox input {
-            width: 80%;
-            padding: 10px 0;
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid #686868;
-            outline: none;
-            font-size: 1em;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-        }
-        .inputbox input[type="submit"] {
-            background: var(--clr);
-            border: none;
-            padding: 15px;
-            border-radius: 50px;
-            color: #1c2530;
-            font-size: 1.15em;
-            letter-spacing: 0.1em;
-            cursor: pointer;
-            transition: 0.5s;
-        }
-        form p a {
-            color: var(--clr);
-            font-weight: 500;
-        }
-        @media (min-width: 1000px) {
-            .container {
-                width: 70%;
-            }
-            form {
-                flex-shrink: 0;
-            }
-        }
-        footer {
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            border-top: 1px solid #333;
-        }
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .footer-column {
-            flex: 1;
-            margin: 20px 10px;
-            min-width: 200px;
-            text-align: left;
-        }
-        .footer-column h3 {
-            color: white;
-            text-shadow: 1px 2px red;
-            margin-bottom: 10px;
-        }
-        .footer-column ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .footer-column ul li {
-            margin: 5px 0;
-        }
-        .footer-column ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer-logo {
-            flex: 1;
-            margin: 20px;
-            text-align: center;
-        }
-        .footer-logo img {
-            height: 150px;
-            width: auto;
-        }
-        .footer-info {
-            width: 100%;
-            text-align: center;
-            border-top: 1px solid #333;
-            padding: 20px;
-        }
-
-        .overlay {
-            font-family: 'Courier New', Courier, monospace;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); 
-            display: none; 
-            justify-content: center;
-            align-items: center;
-        }
-
-        .overlay-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .overlei{border-radius: 10px;padding: 10px;font-family: 'Courier New', Courier, monospace;}
-
-        .wan {font-family: 'Courier New', Courier, monospace;}
-
-
-    </style>
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/navbar.css">
-
     <link rel="stylesheet" href="../assets/css/sidebar.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/account.css">
 </head>
-<body>
+<body class="account-page">
     <site-navbar data-root="../"></site-navbar>
-    <div class="container">
-        <form id="signupForm" target="_blank" action="https://formsubmit.co/202310398@fit.edu.ph" method="POST">
-            <h2>SIGN UP</h2>
-            <div class="inputbox">
-                <input type="text" name="Username" placeholder="Username" required>
-            </div>
-            <div class="inputbox">
-                <input type="text" name="Address" placeholder="Address" required>
-            </div>
-            <div class="inputbox">
-                <input type="email" name="Email" placeholder="Email" required>
-            </div>
-            <div class="inputbox">
-                <input type="password" id="password" name="Password" placeholder="Password" required>
-            </div>
-            <div class="inputbox">
-                <input type="password" id="confirmPassword" name="Password Confirmation" placeholder="Confirm Password" required>
-            </div>
-            <div class="inputbox">
-                <input type="submit" value="Create">
-            </div>
-        </form>
+    <main class="account-main">
+        <section class="account-card" aria-labelledby="account-title">
+            <p class="account-eyebrow">JAPAN DRIFTS / MEMBER ACCESS</p>
+            <h1 id="account-title">Your account</h1>
+            <p class="account-intro">Sign in or create an account to manage your profile.</p>
 
-        <div class="overlay" id="overlay">
-            <div class="overlay-content">
-                <p class="wan">Passwords do not match. Please try again.</p>
-                <button class="overlei" onclick="closeOverlay()">Close</button>
+            <div class="account-tabs" role="tablist" aria-label="Account access">
+                <button class="account-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="login-panel" data-account-tab="login">Sign in</button>
+                <button class="account-tab" type="button" role="tab" aria-selected="false" aria-controls="register-panel" data-account-tab="register">Create account</button>
             </div>
-        </div>
-    </div>
+
+            <form class="account-form" id="login-panel" data-account-panel="login">
+                <label class="account-field">
+                    <span>Email address</span>
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label class="account-field">
+                    <span>Password</span>
+                    <input type="password" name="password" autocomplete="current-password" required>
+                </label>
+                <button class="account-submit" type="submit">Sign in</button>
+                <p class="account-feedback" data-login-feedback role="status" aria-live="polite"></p>
+            </form>
+
+            <form class="account-form" id="register-panel" data-account-panel="register" hidden>
+                <label class="account-field">
+                    <span>Full name</span>
+                    <input type="text" name="name" autocomplete="name" maxlength="100" required>
+                </label>
+                <label class="account-field">
+                    <span>Email address</span>
+                    <input type="email" name="email" autocomplete="email" maxlength="254" required>
+                </label>
+                <label class="account-field">
+                    <span>Address</span>
+                    <input type="text" name="address" autocomplete="street-address" maxlength="200" required>
+                </label>
+                <label class="account-field">
+                    <span>Password</span>
+                    <input type="password" name="password" autocomplete="new-password" minlength="8" required>
+                    <small>Use at least 8 characters.</small>
+                </label>
+                <label class="account-field">
+                    <span>Confirm password</span>
+                    <input type="password" name="confirm-password" autocomplete="new-password" minlength="8" required>
+                </label>
+                <button class="account-submit" type="submit">Create account</button>
+                <p class="account-feedback" data-register-feedback role="status" aria-live="polite"></p>
+            </form>
+
+            <section class="account-profile" data-account-profile hidden aria-labelledby="profile-title">
+                <div class="account-profile-heading">
+                    <div>
+                        <p class="account-eyebrow">MEMBER PROFILE</p>
+                        <h2 id="profile-title">Welcome back</h2>
+                    </div>
+                    <button class="account-sign-out" type="button" data-account-signout>Sign out</button>
+                </div>
+                <form class="account-form" data-profile-form>
+                    <label class="account-field">
+                        <span>Full name</span>
+                        <input type="text" name="name" autocomplete="name" maxlength="100" required>
+                    </label>
+                    <label class="account-field">
+                        <span>Email address</span>
+                        <input type="email" name="email" autocomplete="email" maxlength="254" required>
+                    </label>
+                    <label class="account-field">
+                        <span>Address</span>
+                        <input type="text" name="address" autocomplete="street-address" maxlength="200" required>
+                    </label>
+                    <button class="account-submit" type="submit">Save profile</button>
+                    <p class="account-feedback" data-profile-feedback role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </section>
+    </main>
     <site-sidebar data-root="../"></site-sidebar>
     <site-footer data-root="../"></site-footer>
-    <script>
-        function closeOverlay() {
-            document.getElementById('overlay').style.display = 'none';
-        }
-
-        document.getElementById('signupForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var password = document.getElementById('password').value;
-            var confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                document.getElementById('overlay').style.display = 'flex'; 
-                return;
-            }
-
-
-            this.submit();
-            window.location.href = '../index.html';
-        });
-    </script>
     <script src="../assets/js/navbar.js"></script>
-
     <script src="../assets/js/sidebar.js"></script>
     <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/account.js"></script>
 </body>
 </html>

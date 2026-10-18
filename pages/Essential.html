@@ -115,13 +115,6 @@
      background-color: rgba(255, 255, 255, 0.2); 
  }
  
- .submenu.active {
-     display: block;
-     opacity: 1;
-     visibility: visible;
-     background-color: #ffffff;
- }
-
  main {
      background-color: #000;
      color: white;
@@ -326,45 +319,9 @@
      background-color: #555;
  }
 
-  .overlay {
-     display: none;
-     position: fixed;
-     z-index: 4;
-     left: 0;
-     top: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.7);
-     justify-content: center;
-     align-items: center;
-     text-align: center;
- }
- 
- .overlay-content {
-     background-color: #fff;
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-     width: 80%;
-     max-width: 400px;
- }
- 
- .close-btn {
-     color: #aaa;
-     font-size: 28px;
-     font-weight: bold;
-     float: right;
- }
- 
- .close-btn:hover,
- .close-btn:focus {
-     color: #000;
-     text-decoration: none;
-     cursor: pointer;
- }
- 
     </style>
     <link rel="stylesheet" href="../assets/css/essentials.css">
+    <link rel="stylesheet" href="../assets/css/shop-cart.css">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
 
     <link rel="stylesheet" href="../assets/css/navbar.css">
@@ -386,7 +343,7 @@
                  <div class="product-info">
                      <h3>Bodykit</h3>
                      <p>Give your build a sharper silhouette with bumpers, side skirts, spoilers, and other distinctive exterior details.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="bodykit" data-price="35000">Explore item</button>
                </div>
              </article>
              <article class="product-box">
@@ -394,7 +351,7 @@
                  <div class="product-info">
                      <h3>Spoiler</h3>
                      <p>Add a motorsport-inspired finishing touch, designed to complement your car's shape and stance.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="spoiler" data-price="12000">Explore item</button>
                </div>
              </article>
              <article class="product-box">
@@ -402,7 +359,7 @@
                  <div class="product-info">
                      <h3>Modified Lights</h3>
                      <p>Give your car a signature glow with lighting upgrades that turn heads after dark.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="modified-lights" data-price="8500">Explore item</button>
                     </div>
              </article>
          </div>
@@ -418,7 +375,7 @@
                  <div class="product-info">
                      <h3>Steering Wheel</h3>
                      <p>Bring a more focused feel to the cockpit with a steering wheel that puts you in control.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="steering-wheel" data-price="6500">Explore item</button>
                     </div>
              </article>
              <article class="product-box">
@@ -426,7 +383,7 @@
                  <div class="product-info">
                      <h3>JDM Seats</h3>
                      <p>Find your driving position with supportive, sport-inspired seats for the journey ahead.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="jdm-seats" data-price="22000">Explore item</button>
                     </div>
              </article>
              <article class="product-box">
@@ -434,7 +391,7 @@
                  <div class="product-info">
                      <h3>Gear Shifter Knob</h3>
                      <p>A small detail with a satisfying feel. Give every shift a more personal touch.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="gear-shifter-knob" data-price="1800">Explore item</button>
                     </div>
              </article>
          </div>
@@ -451,7 +408,7 @@
                  <div class="product-info">
                      <h3>Rims</h3>
                      <p>Set off your stance with wheel designs that make a statement from every angle.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="rims" data-price="32000">Explore item</button>
                </div>
              </article>
              <article class="product-box">
@@ -459,7 +416,7 @@
                  <div class="product-info">
                      <h3>Air suspension</h3>
                      <p>Fine-tune your ride height and stance with an adjustable air suspension setup.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="air-suspension" data-price="45000">Explore item</button>
                     </div>
              </article>
              <article class="product-box">
@@ -467,7 +424,7 @@
                  <div class="product-info">
                      <h3>Reverse Camera</h3>
                      <p>Get a clearer view behind you with a camera designed to make reversing easier.</p>
-                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
+                     <button class="btn" type="button" data-cart-add data-product-id="reverse-camera" data-price="3500">Explore item</button>
                     </div>
              </article>
          </div>
@@ -477,28 +434,7 @@
     <site-sidebar data-root="../"></site-sidebar>
     <site-footer data-root="../"></site-footer>
  
- <div class="overlay" id="overlay">
-     <div class="overlay-content">
-         <span class="close-btn" onclick="closeOverlay()">&times;</span>
-         <p>Thank you for purchasing at Japan Drifts!</p> 
-     </div>
-   </div>
-   
-
- <script>
-
-
-             function showOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'flex';
-}
-
-function closeOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
-}
-
- </script>
+ <script src="../assets/js/shop-cart.js"></script>
     <script src="../assets/js/navbar.js"></script>
 
     <script src="../assets/js/sidebar.js"></script>

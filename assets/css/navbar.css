@@ -227,36 +227,6 @@ body.sidebar-open .site-navbar > header > .container > nav {
     color: #fff;
 }
 
-.brand-subnav-index {
-    color: #ee493b;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 9px;
-}
-
-.brand-subnav-arrow {
-    margin-left: auto;
-    color: #ee493b;
-    font-size: 13px;
-}
-
-.site-navbar .sign-in-link {
-    flex: 0 0 auto;
-    padding: 10px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 4px;
-    color: #f4f1ec;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    text-decoration: none;
-    transition: border-color 160ms ease, background 160ms ease;
-}
-
-.site-navbar .sign-in-link:hover,
-.site-navbar .sign-in-link:focus-visible {
-    border-color: #ee493b;
-    background: rgba(238, 73, 59, 0.1);
-}
-
 .site-navbar .compact-header .container {
     justify-content: flex-start;
 }
@@ -283,12 +253,6 @@ body.sidebar-open .site-navbar > header > .container > nav {
     .site-navbar.home-navbar > header > .container > nav {
         flex: 1 0 100%;
         justify-content: flex-start;
-    }
-
-    .site-navbar.home-navbar .sign-in-link {
-        position: absolute;
-        top: 10px;
-        right: 0;
     }
 
     .site-navbar:not(.home-navbar) nav {

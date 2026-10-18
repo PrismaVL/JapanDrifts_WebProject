@@ -128,26 +128,6 @@
     color: var(--streetwear-text);
 }
 
-.streetwear-page .streetwear-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 17px;
-    color: #bdb8b3;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    line-height: 1.6;
-}
-
-.streetwear-page .streetwear-eyebrow > span {
-    width: 22px;
-    height: 2px;
-    flex: 0 0 auto;
-    background: var(--streetwear-accent);
-}
-
 .streetwear-page .streetwear-catalog {
     width: min(100% - 64px, 1200px);
     margin: 0 auto;
@@ -233,14 +213,6 @@
     align-items: flex-start;
     padding: 17px 6px 5px;
     text-align: left;
-}
-
-.streetwear-page .streetwear-product-type {
-    margin-bottom: 9px;
-    color: #958f88;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 9px;
-    letter-spacing: 0.09em;
 }
 
 .streetwear-page .product-info h3 {

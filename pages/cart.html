@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Japan Drifts</title>
+    <link rel="icon" href="../assets/images/JAPAN.png">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/shop-cart.css">
+</head>
+<body>
+    <site-navbar data-root="../"></site-navbar>
+    <main class="cart-page">
+        <div class="checkout-layout">
+            <form class="order-form" id="order-form" novalidate>
+                <h1>Order Form</h1>
+
+                <section class="checkout-section" aria-labelledby="shipping-heading">
+                    <h2 id="shipping-heading" class="checkout-section-heading">1. Shipping information</h2>
+                    <div class="checkout-field-grid">
+                        <label class="checkout-field">
+                            <span>Full name</span>
+                            <input name="full-name" autocomplete="name" required>
+                        </label>
+                        <label class="checkout-field">
+                            <span>Phone number</span>
+                            <input name="phone" type="tel" autocomplete="tel" inputmode="tel"
+                                pattern="(?:\+639[0-9]{9}|09[0-9]{9})"
+                                title="Enter a Philippine mobile number starting with +63 or 09."
+                                placeholder="+639XXXXXXXXX or 09XXXXXXXXX" required>
+                        </label>
+                    </div>
+                    <label class="checkout-field">
+                        <span>Address</span>
+                        <input name="address" autocomplete="street-address" required>
+                    </label>
+                    <label class="checkout-field checkout-city">
+                        <span>City</span>
+                        <select name="city" autocomplete="address-level2" required>
+                            <option value="">Choose a city</option>
+                            <option value="Caloocan">Caloocan</option>
+                            <option value="Las Piñas">Las Piñas</option>
+                            <option value="Makati">Makati</option>
+                            <option value="Malabon">Malabon</option>
+                            <option value="Mandaluyong">Mandaluyong</option>
+                            <option value="Manila">Manila</option>
+                            <option value="Marikina">Marikina</option>
+                            <option value="Muntinlupa">Muntinlupa</option>
+                            <option value="Navotas">Navotas</option>
+                            <option value="Parañaque">Parañaque</option>
+                            <option value="Pasay">Pasay</option>
+                            <option value="Pasig">Pasig</option>
+                            <option value="Pateros">Pateros (Municipality)</option>
+                            <option value="Quezon City">Quezon City</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="Taguig">Taguig</option>
+                            <option value="Valenzuela">Valenzuela</option>
+                        </select>
+                    </label>
+                </section>
+
+                <fieldset class="checkout-section checkout-options">
+                    <legend class="checkout-section-heading">2. Delivery method</legend>
+                    <label class="checkout-choice">
+                        <input type="radio" name="delivery-method" value="standard" data-shipping-price="150" checked>
+                        <span class="checkout-choice-copy"><strong>Standard delivery</strong><small>Estimated: 3–5 business days</small></span>
+                        <strong class="checkout-choice-price">₱150</strong>
+                    </label>
+                    <label class="checkout-choice">
+                        <input type="radio" name="delivery-method" value="express" data-shipping-price="250">
+                        <span class="checkout-choice-copy"><strong>Express delivery</strong><small>Estimated: 1–2 business days</small></span>
+                        <strong class="checkout-choice-price">₱250</strong>
+                    </label>
+                </fieldset>
+
+                <fieldset class="checkout-section checkout-options">
+                    <legend class="checkout-section-heading">3. Payment method</legend>
+                    <div class="payment-options">
+                        <label class="payment-choice">
+                            <input type="radio" name="payment-method" value="online-bank" required>
+                            <span>Online bank</span>
+                        </label>
+                        <label class="payment-choice">
+                            <input type="radio" name="payment-method" value="credit-card">
+                            <span>Credit card</span>
+                        </label>
+                        <label class="payment-choice">
+                            <input type="radio" name="payment-method" value="gcash">
+                            <span>GCash</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <p class="checkout-feedback" data-order-feedback role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="checkout-summary" aria-labelledby="cart-heading">
+                <h2 id="cart-heading">Your cart</h2>
+                <section data-shopping-cart aria-label="Shopping cart contents" aria-live="polite"></section>
+                <div class="checkout-totals" aria-live="polite">
+                    <div><span>Subtotal</span><strong data-order-subtotal>₱0</strong></div>
+                    <div><span>Shipping</span><strong data-order-shipping>₱150</strong></div>
+                    <div class="checkout-grand-total"><span>Total</span><strong data-order-total>₱150</strong></div>
+                </div>
+                <button class="shop-button shop-button-primary checkout-submit" type="submit" form="order-form">Complete order</button>
+            </aside>
+        </div>
+    </main>
+    <site-sidebar data-root="../"></site-sidebar>
+    <site-footer data-root="../"></site-footer>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/shop-cart.js"></script>
+</body>
+</html>

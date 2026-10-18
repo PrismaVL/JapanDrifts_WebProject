@@ -49,10 +49,11 @@
                                     <li><button class="nav-link-button" type="button" data-brand-toggle aria-controls="brand-subnav" aria-expanded="false">Car Brands</button></li>
                                     <li><a href="${root}pages/Essential.html">Essentials</a></li>
                                     <li><a href="${root}pages/Streetwear.html">Streetwears</a></li>
+                                    <li><a href="${root}pages/cart.html">Cart</a></li>
+                                    <li><a href="${root}pages/log.html">Account</a></li>
                                     <li><a href="#sidebar-more" data-sidebar-toggle aria-controls="sidebar-more" aria-expanded="false">More</a></li>
                                 </ul>
                             </div>
-                            ${home ? `<a class="sign-in-link" href="${root}pages/log.html">Sign in</a>` : ""}
                         </nav>
                     </div>
                 </header>
