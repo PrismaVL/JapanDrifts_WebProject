@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="icon" href="JAPAN.png">
+    <link rel="icon" href="../assets/images/JAPAN.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         
@@ -193,16 +193,13 @@
 
 
     </style>
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 <body>
-    <header>
-        <div class="container1">
-            <a href="index.html">
-                <img src="JAPAN.png" class="logo">
-            </a>
-            <h1>JAPAN DRIFTS</h1>
-        </div>
-    </header>
+    <site-navbar data-root="../"></site-navbar>
     <div class="container">
         <form id="signupForm" target="_blank" action="https://formsubmit.co/202310398@fit.edu.ph" method="POST">
             <h2>SIGN UP</h2>
@@ -233,33 +230,8 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: <a href="mailto:202310398@fit.edu.ph">202310398@fit.edu.ph</a></li>
-                    <li>Phone: <a href="tel:+63 966 703 6969">(+63) 966-703-6969</a></li>
-                    <li>Address: 69 Curve St., Tokyo, Japan</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Prismalcs/">Facebook</a></li>
-                    <li><a href="https://x.com/Japan_Drifts">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/prsm_lcs/">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-logo">
-                <img src="JAPAN.png" alt="Logo">
-            </div>
-        </div>
-        <div class="footer-info">
-            <p>By Jaymard Licas</p>
-            <p>© 2024 JAPAN DRIFTS. All rights reserved.</p>
-        </div>
-    </footer>
+    <site-sidebar data-root="../"></site-sidebar>
+    <site-footer data-root="../"></site-footer>
     <script>
         function closeOverlay() {
             document.getElementById('overlay').style.display = 'none';
@@ -277,8 +249,12 @@
 
 
             this.submit();
-            window.location.href = 'home.html'; 
+            window.location.href = '../index.html';
         });
     </script>
+    <script src="../assets/js/navbar.js"></script>
+
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>

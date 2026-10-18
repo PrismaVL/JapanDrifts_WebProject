@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision & Mission - Japan Drifts</title>
-    <link rel="icon" href="JAPAN.png"/>
+    <link rel="icon" href="../assets/images/JAPAN.png"/>
     <style>
 
         .mission-section, .vision-section {
@@ -333,40 +333,19 @@ header {
 
 
     </style>
+    <link rel="stylesheet" href="../assets/css/information.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
-<body>
-    <header>  
-        <div class="container">  
-            <a href="home.html">    
-                <img src="JAPAN.png" class="logo">  
-            </a>  
-            <h1>JAPAN DRIFTS</h1>  
-            <nav>  
-                <div class="navbar">  
-                    <ul>  
-                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#">Car Brands</a>  
-                            <ul class="submenu">  
-                                <li><a href="Toyota.html">Toyota</a></li> 
-                                <li><a href="Mazda.html">Mazda</a></li>
-                                <li><a href="Honda.html">Honda</a></li>  
-                                <li><a href="Mitsubishi.html">Mitsubishi</a></li>  
-                                <li><a href="Lexus.html">Lexus</a></li>  
-                                <li><a href="Subaru.html">Subaru</a></li>  
-                                <li><a href="Nissan.html">Nissan</a></li> 
-                            </ul>  
-                        </li>  
-                        <li><a href="Essential.html">Essentials</a></li>  
-                        <li><a href="Streetwear.html">Streetwears</a></li>    
-                        <li><a href="#" onclick="toggleSidebar('sidebar-more')">More</a></li> 
-                    </ul>  
-                </div>  
-            </nav>
-        </div>  
-    </header>  
+<body class="information-page vision-page">
+    <site-navbar data-root="../"></site-navbar>
 
     <main>
+        <div class="vision-content-grid">
         <section class="vision-section">
+            <p class="section-kicker">OUR NORTH STAR / DIRECTION</p>
             <h2>Our Vision</h2>
             
             <p>At Japan Drifts, our vision is to be the global epicenter for Japanese automotive culture, connecting enthusiasts worldwide and celebrating the legacy of Japanese car craftsmanship.</p>
@@ -379,6 +358,7 @@ header {
         </section>
 
         <section class="mission-section">
+            <p class="section-kicker">OUR PURPOSE / COMMITMENT</p>
             <h2>Our Mission</h2>
             
             <p>Our mission at Japan Drifts is to curate a diverse selection of Japanese cars, ensuring each listing meets our stringent standards of authenticity, quality, and accuracy.</p>
@@ -391,60 +371,14 @@ header {
             
             <p>Join us in our mission to celebrate the artistry, innovation, and thrill of Japanese cars, making Japan Drifts the ultimate destination for enthusiasts worldwide.</p>
         </section>
+        </div>
     </main>
+    <site-sidebar data-root="../"></site-sidebar>
+    <site-footer data-root="../"></site-footer>
 
-    <aside id="sidebar-more" class="sidebar">
-        <span class="close-button" onclick="toggleSidebar('sidebar-more')">X</span>
-        <h2>More Options</h2>
-        <ul>
-            <li><a href="FAQ.html"><div class="sidebar-link">FAQ</div></a></li> 
-            <li><a href="About.html"><div class="sidebar-link">About Us</div></a></li> 
-            <li><a href="Story.html"><div class="sidebar-link">Our Story</div></a></li>  
-            <li><a href="Vision.html"><div class="sidebar-link">Vision & Mission</div></a></li>     
-        </ul>
-    </aside>
+    <script src="../assets/js/navbar.js"></script>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: <a href="mailto:202310398@fit.edu.ph">202310398@fit.edu.ph</a></li>
-                    <li>Phone: <a href="tel:+63 966 703 6969">(+63) 966-703-6969</a></li>
-                    <li>Address: 69 Curve St., Tokyo, Japan</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Prismalcs/">Facebook</a></li>
-                    <li><a href="https://x.com/Japan_Drifts">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/prsm_lcs/">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-logo">
-                <img src="JAPAN.png" alt="Logo">
-            </div>
-        </div>
-        <div class="footer-info">
-            <p>By Jaymard Licas</p>
-            <p>© 2024 JAPAN DRIFTS. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleSidebar(sidebarId) {
-            const sidebar = document.getElementById(sidebarId);
-            const isActive = sidebar.classList.contains('active');
-            
-            document.querySelectorAll('.sidebar').forEach(function(sidebar) {
-                sidebar.classList.remove('active');
-            });
-            
-            if (!isActive) {
-                sidebar.classList.add('active');
-            }
-        }
-    </script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>

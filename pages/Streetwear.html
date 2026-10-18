@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essentials - Japan Drifts</title>
-    <link rel="icon" href="JAPAN.png"/>
+    <title>Streetwear - Japan Drifts</title>
+    <link rel="icon" href="../assets/images/JAPAN.png"/>
 
     <style>
         body {
@@ -364,154 +364,97 @@
  }
  
     </style>
+    <link rel="stylesheet" href="../assets/css/streetwear.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
 
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
-<body>
-    <header>  
-        <div class="container">  
-            <a href="home.html">    
-                <img src="JAPAN.png" class="logo">  
-            </a>  
-            <h1>JAPAN DRIFTS</h1>  
-            <nav>  
-                <div class="navbar">  
-                    <ul>  
-                         <li><a href="index.html">Home</a>  
-                        <li><a href="#">Car Brands</a>  
-                            <ul class="submenu">  
-                                <li><a href="Toyota.html">Toyota</a></li> 
-                                <li><a href="Mazda.html">Mazda</a></li>
-                                <li><a href="Honda.html">Honda</a></li>  
-                                <li><a href="Mitsubishi.html">Mitsubishi</a></li>  
-                                <li><a href="Lexus.html">Lexus</a></li>  
-                                <li><a href="Subaru.html">Subaru</a></li>  
-                                <li><a href="Nissan.html">Nissan</a></li> 
-                            </ul>  
-                        </li>  
-                        <li><a href="Essential.html">Essentials</a></li>  
-                        <li><a href="Streetwear.html">Streetwears</a></li>    
-                        <li><a href="#" onclick="toggleSidebar('sidebar-more')">More</a></li> 
-                    </ul>  
-                </div>  
-            </nav>
-        </div>  
-    </header>  
+<body class="streetwear-page">
+    <site-navbar data-root="../"></site-navbar>
 
-    <main>
-     <section id="exteriors" class="featured-products">
-         <h2 class="ess">Exteriors</h2>
+    <main class="streetwear-main">
+     <div class="streetwear-catalog">
+     <section id="apparel" class="featured-products">
+         <div class="streetwear-section-heading">
+             <div><h2 class="ess">Made to be worn.</h2></div>
+             <p>Good taste. No dress code.</p>
+         </div>
          <div class="product-list">
-             <div class="product-box">
-                 <img src="men.png" alt="Product 1">
+             <article class="product-box">
+                 <img src="../assets/images/men.png" alt="Men's Japan Drifts streetwear outfit">
                  <div class="product-info">
-                     <h3>Men Set</h3>
-                     <a href="#" class="btn" onclick="showOverlay()">Buy Now</a>
+                     <h3>Men's Collection</h3>
+                     <p>Relaxed everyday streetwear with a motorsport-inspired point of view.</p>
+                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore collection</a>
                  </div>
-             </div>
-             <div class="product-box">
-                 <img src="women.png" alt="Product 2">
+             </article>
+             <article class="product-box">
+                 <img src="../assets/images/women.png" alt="Women's Japan Drifts streetwear outfit">
                  <div class="product-info">
-                     <h3>Women Set</h3>
-                     <a href="#" class="btn" onclick="showOverlay()">Buy Now</a>
+                     <h3>Women's Collection</h3>
+                     <p>Street-ready staples made to fit your style, on the road and off.</p>
+                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore collection</a>
                  </div>
-             </div>
-             <div class="product-box">
-                 <img src="hoodie.png" alt="New Product">
+             </article>
+             <article class="product-box">
+                 <img src="../assets/images/hoodie.png" alt="Japan Drifts motorsport-inspired hoodie">
                  <div class="product-info">
-                     <h3>Hoodies</h3>
-                     <a href="#" class="btn" onclick="showOverlay()">Buy Now</a>
+                     <h3>Graphic Hoodies</h3>
+                     <p>Easy layers for late-night meets, early starts, and the long way home.</p>
+                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore collection</a>
                  </div>
-             </div>
+             </article>
          </div>
      </section>
  
-     <section id="interiors" class="featured-products">
-         <h2 class="ess">Interiors</h2>
+     <section id="accessories" class="featured-products">
+         <div class="streetwear-section-heading">
+             <div><h2 class="ess">Details that say you.</h2></div>
+             <p>Small pieces. Strong character.</p>
+         </div>
          <div class="product-list">
-             <div class="product-box">
-                 <img src="ring.png" alt="Interior Product 1">
+             <article class="product-box">
+                 <img src="../assets/images/ring.png" alt="Japan Drifts ring set">
                  <div class="product-info">
                      <h3>Ring Set</h3>
-                     <a href="#" class="btn" onclick="showOverlay()">Buy Now</a>
+                     <p>Understated finishing details for an everyday rotation with an edge.</p>
+                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
                  </div>
-             </div>
-             <div class="product-box">
-                 <img src="glasses.png" alt="Interior Product 2">
+             </article>
+             <article class="product-box">
+                 <img src="../assets/images/glasses.png" alt="Japan Drifts street-style glasses">
                  <div class="product-info">
-                     <h3>Glasses</h3>
-                     <a href="#" class="btn" onclick="showOverlay()">Buy Now</a>
+                     <h3>Street Shades</h3>
+                     <p>A clean, confident finishing touch from daytime drives to city nights.</p>
+                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
                  </div>
-             </div>
-             <div class="product-box">
-                 <img src="Gloves.png" alt="New Interior Product">
+             </article>
+             <article class="product-box">
+                 <img src="../assets/images/Gloves.png" alt="Pair of black Japan Drifts driving gloves">
                  <div class="product-info">
                      <h3>Driving Gloves</h3>
-                     <a href="#" class="btn" onclick="showOverlay()">Buy Now</a>
+                     <p>A nod to the track, styled for all the miles in between.</p>
+                     <a href="#" class="btn" onclick="showOverlay(); return false;">Explore item</a>
                  </div>
-             </div>
+             </article>
          </div>
      </section>
+     </div>
  </main>
- 
-
- <aside id="sidebar-more" class="sidebar">
-    <span class="close-button" onclick="toggleSidebar('sidebar-more')">X</span>
-    <h2>More Options</h2>
-    <ul>
-        <li><a href="FAQ.html"><div class="sidebar-link">FAQ</div></a></li> 
-        <li><a href="About.html"><div class="sidebar-link">About Us</div></a></li> 
-        <li><a href="Story.html"><div class="sidebar-link">Our Story</div></a></li>  
-        <li><a href="Vision.html"><div class="sidebar-link">Vision & Mission</div></a></li>     
-    </ul>
-</aside>
- <footer>
-     <div class="footer-container">
-         <div class="footer-column">
-             <h3>Contact Us</h3>
-             <ul>
-                 <li>Email: <a href="mailto:202310398@fit.edu.ph">202310398@fit.edu.ph</a></li>
-                 <li>Phone: <a href="tel:+63 966 703 6969">(+63) 966-703-6969</a></li>
-                 <li>Address: 69 Curve St., Tokyo, Japan</li>
-             </ul>
-         </div>
-         <div class="footer-column">
-             <h3>Follow Us</h3>
-             <ul class="social-links">
-                 <li><a href="https://www.facebook.com/Prismalcs/">Facebook</a></li>
-                 <li><a href="https://x.com/Japan_Drifts">Twitter</a></li>
-                 <li><a href="https://www.instagram.com/prsm_lcs/">Instagram</a></li>
-             </ul>
-         </div>
-         <div class="footer-logo">
-             <img src="JAPAN.png" alt="Logo">
-         </div>
-     </div>
-     <div class="footer-info">
-         <p>By Jaymard Licas</p>
-         <p>© 2024 JAPAN DRIFTS. All rights reserved.</p>
-     </div>
- </footer>
+    <site-sidebar data-root="../"></site-sidebar>
+    <site-footer data-root="../"></site-footer>
  
  <div class="overlay" id="overlay">
      <div class="overlay-content">
          <span class="close-btn" onclick="closeOverlay()">&times;</span>
-         <p>Thank you for purchasing at Japan Drifts!</p> 
+         <p>Thanks for checking out Japan Drifts! Get in touch to learn more about our streetwear collection.</p>
      </div>
    </div>
 
    <script>
-     function toggleSidebar(sidebarId) {
-         const sidebar = document.getElementById(sidebarId);
-         const isActive = sidebar.classList.contains('active');
-         
-         document.querySelectorAll('.sidebar').forEach(function(sidebar) {
-             sidebar.classList.remove('active');
-         });
-         
-         if (!isActive) {
-             sidebar.classList.add('active');
-         }
-     }
+
 
      function showOverlay() {
 const overlay = document.getElementById('overlay');
@@ -524,5 +467,9 @@ overlay.style.display = 'none';
 }
 
 </script>
-     </body>
+         <script src="../assets/js/navbar.js"></script>
+
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/footer.js"></script>
+</body>
      </html>

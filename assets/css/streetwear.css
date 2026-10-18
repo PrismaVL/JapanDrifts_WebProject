@@ -1,0 +1,586 @@
+.streetwear-page {
+    --streetwear-bg: #101112;
+    --streetwear-panel: #17191a;
+    --streetwear-text: #f4f1ec;
+    --streetwear-muted: #a09b95;
+    --streetwear-accent: #ee493b;
+    --streetwear-line: rgba(255, 255, 255, 0.11);
+    min-width: 320px;
+    background: var(--streetwear-bg);
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.streetwear-page *,
+.streetwear-page *::before,
+.streetwear-page *::after {
+    box-sizing: border-box;
+}
+
+.streetwear-page a {
+    color: inherit;
+}
+
+.streetwear-page header {
+    position: relative;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid var(--streetwear-line);
+    background: #101112;
+    text-align: left;
+}
+
+.streetwear-page header .container {
+    width: min(100% - 64px, 1320px);
+    min-height: 78px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: space-between;
+    gap: 36px;
+}
+
+.streetwear-page header > .container > a:first-child {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.streetwear-page .logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 12px 0 0;
+    object-fit: contain;
+}
+
+.streetwear-page header h1 {
+    flex: 1 1 auto;
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-shadow: none;
+}
+
+.streetwear-page nav {
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.streetwear-page nav > .navbar > ul {
+    align-items: center;
+    gap: 4px;
+}
+
+.streetwear-page nav ul li {
+    margin: 0;
+}
+
+.streetwear-page nav ul li:hover {
+    background: transparent;
+}
+
+.streetwear-page nav ul li a {
+    border-radius: 4px;
+    color: #cfcdca;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.015em;
+    padding: 10px 12px;
+    transition: color 160ms ease, background 160ms ease;
+}
+
+.streetwear-page nav ul li a:hover,
+.streetwear-page nav ul li a:focus-visible {
+    background: rgba(255, 255, 255, 0.07);
+    color: #fff;
+}
+
+.streetwear-page nav ul ul {
+    top: calc(100% + 4px);
+    left: 0;
+    display: grid;
+    width: 220px;
+    padding: 8px;
+    border: 1px solid var(--streetwear-line);
+    border-radius: 8px;
+    background: #191a1b;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    grid-template-columns: 1fr;
+}
+
+.streetwear-page nav ul ul li {
+    border-radius: 4px;
+    background: transparent;
+}
+
+.streetwear-page nav ul ul li a {
+    padding: 10px 12px;
+}
+
+.streetwear-page .streetwear-main {
+    padding: 0;
+    overflow: hidden;
+    background: var(--streetwear-bg);
+    color: var(--streetwear-text);
+}
+
+.streetwear-page .streetwear-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 17px;
+    color: #bdb8b3;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+}
+
+.streetwear-page .streetwear-eyebrow > span {
+    width: 22px;
+    height: 2px;
+    flex: 0 0 auto;
+    background: var(--streetwear-accent);
+}
+
+.streetwear-page .streetwear-catalog {
+    width: min(100% - 64px, 1200px);
+    margin: 0 auto;
+    padding-bottom: 22px;
+}
+
+.streetwear-page .featured-products {
+    margin: 0;
+    padding: 76px 0;
+    border: 0;
+    border-bottom: 1px solid var(--streetwear-line);
+    background: transparent;
+    color: var(--streetwear-text);
+}
+
+.streetwear-page .streetwear-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.streetwear-page .streetwear-section-heading h2 {
+    margin: 0;
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    line-height: 1.1;
+    text-shadow: none;
+}
+
+.streetwear-page .streetwear-section-heading > p {
+    margin: 0 0 5px;
+    color: var(--streetwear-muted);
+    font-size: 12px;
+}
+
+.streetwear-page .product-list {
+    display: grid;
+    align-items: stretch;
+    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.streetwear-page .product-box {
+    position: relative;
+    display: flex;
+    width: auto;
+    min-width: 0;
+    flex-direction: column;
+    margin: 0;
+    padding: 14px;
+    overflow: hidden;
+    border: 1px solid var(--streetwear-line);
+    background:
+        radial-gradient(ellipse at 50% 24%, rgba(105, 101, 95, 0.1), transparent 56%),
+        linear-gradient(150deg, #191b1c, #131415 80%);
+    transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.streetwear-page .product-box:hover {
+    border-color: rgba(238, 73, 59, 0.58);
+    transform: translateY(-4px);
+}
+
+.streetwear-page .product-box > img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    flex: 0 0 auto;
+    padding: 18px;
+    border: 0;
+    background: linear-gradient(150deg, #202223, #181a1b);
+    object-fit: contain;
+    transition: transform 220ms ease;
+}
+
+.streetwear-page .product-box:hover > img {
+    transform: scale(1.035);
+}
+
+.streetwear-page .product-info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 17px 6px 5px;
+    text-align: left;
+}
+
+.streetwear-page .streetwear-product-type {
+    margin-bottom: 9px;
+    color: #958f88;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 9px;
+    letter-spacing: 0.09em;
+}
+
+.streetwear-page .product-info h3 {
+    margin: 0;
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.streetwear-page .product-info p {
+    flex: 1 1 auto;
+    margin: 10px 0 20px;
+    color: var(--streetwear-muted);
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.streetwear-page .product-info .btn {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 0;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 160ms ease, background 160ms ease;
+}
+
+.streetwear-page .product-info .btn span {
+    color: var(--streetwear-accent);
+}
+
+.streetwear-page .product-info .btn:hover,
+.streetwear-page .product-info .btn:focus-visible {
+    border-color: var(--streetwear-accent);
+    background: rgba(238, 73, 59, 0.11);
+}
+
+.streetwear-page footer {
+    height: auto;
+    padding: 46px 0 0;
+    border-top: 1px solid var(--streetwear-line);
+    background: #0c0d0e;
+    color: var(--streetwear-text);
+    text-align: left;
+}
+
+.streetwear-page .footer-container {
+    width: min(100% - 64px, 1200px);
+    align-items: flex-start;
+    padding: 0;
+}
+
+.streetwear-page .footer-column {
+    margin: 0 24px 30px 0;
+}
+
+.streetwear-page .footer-column h3 {
+    margin: 0 0 16px;
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-shadow: none;
+}
+
+.streetwear-page .footer-column ul li {
+    margin: 9px 0;
+    color: #96918c;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.streetwear-page .footer-column ul li a {
+    color: #c8c2bc;
+}
+
+.streetwear-page .footer-column ul li a:hover {
+    color: var(--streetwear-accent);
+}
+
+.streetwear-page .footer-logo {
+    flex: 0 0 auto;
+    margin: 0 0 30px auto;
+}
+
+.streetwear-page .footer-logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.streetwear-page .footer-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px max(32px, calc((100vw - 1200px) / 2));
+    border-top: 1px solid var(--streetwear-line);
+    color: #7e7975;
+}
+
+.streetwear-page .footer-info p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.streetwear-page .overlay {
+    z-index: 20;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(5px);
+}
+
+.streetwear-page .overlay-content {
+    position: relative;
+    width: min(100%, 420px);
+    padding: 45px 28px 30px;
+    border: 1px solid var(--streetwear-line);
+    border-radius: 6px;
+    background: var(--streetwear-panel);
+    box-shadow: 0 24px 72px rgba(0, 0, 0, 0.55);
+    color: var(--streetwear-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.streetwear-page .overlay-content p {
+    margin: 0;
+}
+
+.streetwear-page .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: #aaa49d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.streetwear-page :focus-visible {
+    outline: 2px solid var(--streetwear-accent);
+    outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+    .streetwear-page header .container {
+        width: min(100% - 36px, 1320px);
+        gap: 18px;
+    }
+
+    .streetwear-page .logo {
+        width: 34px;
+        height: 34px;
+        margin-right: 8px;
+    }
+
+    .streetwear-page header h1 {
+        font-size: 12px;
+    }
+
+    .streetwear-page nav ul li a {
+        padding: 9px 7px;
+        font-size: 11px;
+    }
+
+    .streetwear-page .streetwear-catalog,
+    .streetwear-page .footer-container {
+        width: min(100% - 48px, 1200px);
+    }
+
+    .streetwear-page .product-list {
+        gap: 11px;
+    }
+
+    .streetwear-page .product-box {
+        padding: 10px;
+    }
+
+    .streetwear-page .product-box > img {
+        height: 180px;
+    }
+
+    .streetwear-page .product-info {
+        padding: 15px 4px 4px;
+    }
+
+    .streetwear-page .product-info h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .streetwear-page header .container {
+        min-height: auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 14px 0 10px;
+    }
+
+    .streetwear-page .logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .streetwear-page header h1 {
+        flex: 1 1 auto;
+        font-size: 13px;
+    }
+
+    .streetwear-page nav {
+        width: 100%;
+        flex: 1 0 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .streetwear-page nav > .navbar {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .streetwear-page nav > .navbar > ul {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .streetwear-page nav ul li a {
+        padding: 9px 6px;
+        font-size: 10px;
+    }
+
+    .streetwear-page nav ul ul {
+        width: 190px;
+    }
+
+    .streetwear-page .streetwear-catalog,
+    .streetwear-page .footer-container {
+        width: calc(100% - 40px);
+    }
+
+    .streetwear-page .featured-products {
+        padding: 58px 0;
+    }
+
+    .streetwear-page .streetwear-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 22px;
+    }
+
+    .streetwear-page .streetwear-section-heading h2 {
+        font-size: clamp(29px, 8vw, 38px);
+    }
+
+    .streetwear-page .product-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .streetwear-page .product-box {
+        padding: 12px;
+    }
+
+    .streetwear-page .product-box > img {
+        height: clamp(205px, 60vw, 280px);
+        padding: 22px;
+    }
+
+    .streetwear-page .product-info {
+        padding: 17px 5px 5px;
+    }
+
+    .streetwear-page .product-info h3 {
+        font-size: 17px;
+    }
+
+    .streetwear-page .product-info p {
+        margin-bottom: 17px;
+        font-size: 12px;
+    }
+
+    .streetwear-page footer {
+        padding-top: 36px;
+    }
+
+    .streetwear-page .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .streetwear-page .footer-column,
+    .streetwear-page .footer-logo {
+        width: 100%;
+        margin: 0 0 18px;
+        text-align: left;
+    }
+
+    .streetwear-page .footer-logo img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .streetwear-page .footer-info {
+        flex-direction: column;
+        gap: 5px;
+        padding: 13px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .streetwear-page *,
+    .streetwear-page *::before,
+    .streetwear-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
