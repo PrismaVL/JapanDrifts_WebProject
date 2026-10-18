@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Japan Drifts</title>
-    <link rel="icon" href="JAPAN.png"/>
+    <link rel="icon" href="../assets/images/JAPAN.png"/>
 
     <style>body {
         font-family: 'Courier New', Courier, monospace;
@@ -317,129 +317,71 @@
         margin-bottom: 25px;
     }
    </style>
+    <link rel="stylesheet" href="../assets/css/faq.css">
+   <link rel="stylesheet" href="../assets/css/sidebar.css">
 
 
 
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
-<body>
-    <header>  
-        <div class="container">  
-            <a href="index.html">    
-                <img src="JAPAN.png" class="logo">  
-            </a>  
-            <h1>JAPAN DRIFTS</h1>  
-            <nav>  
-                <div class="navbar">  
-                    <ul>  
-                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Car Brands</a>  
-                            <ul class="submenu">  
-                                <li><a href="Toyota.html">Toyota</a></li> 
-                                <li><a href="Mazda.html">Mazda</a></li>
-                                <li><a href="Honda.html">Honda</a></li>  
-                                <li><a href="Mitsubishi.html">Mitsubishi</a></li>  
-                                <li><a href="Lexus.html">Lexus</a></li>  
-                                <li><a href="Subaru.html">Subaru</a></li>  
-                                <li><a href="Nissan.html">Nissan</a></li> 
-                            </ul>  
-                        </li>  
-                        <li><a href="Essential.html">Essentials</a></li>  
-                        <li><a href="Streetwear.html">Streetwears</a></li>    
-                        <li><a href="#" onclick="toggleSidebar('sidebar-more')">More</a></li> 
-                    </ul>  
-                </div>  
-            </nav>
-        </div>  
-    </header>  
+<body class="faq-page">
+    <site-navbar data-root="../"></site-navbar>
 
-    <main>
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
+    <main class="faq-main">
+        <section id="faq-list" class="faq-section">
+            <div class="faq-section-heading">
+                <div>
+                    <h2>Frequently asked <em>questions.</em></h2>
+                </div>
+            </div>
+            <div class="faq-list">
             
-            <div class="faq-item">
+            <article class="faq-item">
+                <span class="faq-number">01</span>
                 <h3>How do I list my car for sale?</h3>
                 <p>To list your car, go to your account dashboard, click on "Sell My Car," and follow the instructions to fill out the listing details.</p>
-            </div>
+            </article>
             
-            <div class="faq-item">
+            <article class="faq-item">
+                <span class="faq-number">02</span>
                 <h3>What types of cars can I find on Japan Drifts?</h3>
                 <p>We specialize in Japanese car brands such as Toyota, Mazda, Honda, Mitsubishi, Lexus, Subaru, and Nissan. You'll find a wide range of models from these manufacturers.</p>
-            </div>
+            </article>
             
-            <div class="faq-item">
+            <article class="faq-item">
+                <span class="faq-number">03</span>
                 <h3>How can I contact a seller?</h3>
                 <p>You can contact the seller directly through the contact information provided on their listing page. Alternatively, you can use our messaging system if the seller has enabled it.</p>
-            </div>
+            </article>
             
-            <div class="faq-item">
+            <article class="faq-item">
+                <span class="faq-number">04</span>
                 <h3>Is it safe to buy cars through Japan Drifts?</h3>
                 <p>Yes, we take security seriously. All transactions are secured and we verify listings to minimize fraud. However, always exercise caution and follow safe online buying practices.</p>
-            </div>
+            </article>
             
-            <div class="faq-item">
+            <article class="faq-item">
+                <span class="faq-number">05</span>
                 <h3>Can I negotiate the price?</h3>
                 <p>Yes, you can negotiate directly with the seller. Use our messaging system or contact them via the provided contact details to discuss the price.</p>
-            </div>
+            </article>
 
-            <div class="faq-item">
+            <article class="faq-item">
+                <span class="faq-number">06</span>
                <h3>How do I buy a car on Japan Drifts?</h3>
                <p>To buy a car, browse through the listings, select a car you're interested in, and contact the seller directly using the provided contact information. You can arrange a meeting, inspection, and negotiate the price directly with the seller.</p>
-           </div>
+           </article>
+            </div>
         </section>
     </main>
+    <site-sidebar data-root="../"></site-sidebar>
+    <site-footer data-root="../"></site-footer>
 
-    <aside id="sidebar-more" class="sidebar">
-     <span class="close-button" onclick="toggleSidebar('sidebar-more')">X</span>
-     <h2>More Options</h2>
-     <ul>
-         <li><a href="FAQ.html"><div class="sidebar-link">FAQ</div></a></li> 
-         <li><a href="About.html"><div class="sidebar-link">About Us</div></a></li> 
-         <li><a href="Story.html"><div class="sidebar-link">Our Story</div></a></li>  
-         <li><a href="Vision.html"><div class="sidebar-link">Vision & Mission</div></a></li>     
-     </ul>
- </aside>
+    <script src="../assets/js/navbar.js"></script>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: <a href="mailto:202310398@fit.edu.ph">202310398@fit.edu.ph</a></li>
-                    <li>Phone: <a href="tel:+63 966 703 6969">(+63) 966-703-6969</a></li>
-                    <li>Address: 69 Curve St., Tokyo, Japan</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com/Prismalcs/">Facebook</a></li>
-                    <li><a href="https://x.com/Japan_Drifts">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/prsm_lcs/">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-logo">
-                <img src="JAPAN.png" alt="Logo">
-            </div>
-        </div>
-        <div class="footer-info">
-            <p>By Jaymard Licas</p>
-            <p>© 2024 JAPAN DRIFTS. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleSidebar(sidebarId) {
-            const sidebar = document.getElementById(sidebarId);
-            const isActive = sidebar.classList.contains('active');
-            
-            document.querySelectorAll('.sidebar').forEach(function(sidebar) {
-                sidebar.classList.remove('active');
-            });
-            
-            if (!isActive) {
-                sidebar.classList.add('active');
-            }
-        }
-    </script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 </html>
