@@ -81,8 +81,11 @@
     overflow: hidden;
     padding: 80px max(32px, calc((100vw - 1200px) / 2));
     background:
+        linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
         radial-gradient(ellipse at 75% 56%, rgba(121, 39, 34, 0.22), transparent 38%),
         linear-gradient(115deg, #111213 15%, #151414 56%, #1b1515 100%);
+    background-size: 96px 96px, 96px 96px, auto, auto;
 }
 
 .home-page .hero::after {
@@ -96,17 +99,6 @@
     border-radius: 50%;
     content: "";
     transform: rotate(-17deg);
-}
-
-.home-page .hero-grid {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-    background-position: center center;
-    background-size: 76px 76px;
-    mask-image: linear-gradient(90deg, black, transparent 72%);
-    pointer-events: none;
 }
 
 .home-page .hero-copy {
@@ -288,33 +280,13 @@
     color: #fff;
 }
 
-.home-page .scroll-cue {
-    position: absolute;
-    bottom: 28px;
-    left: max(32px, calc((100vw - 1200px) / 2));
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    color: #8a8580;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 9px;
-    letter-spacing: 0.13em;
-    text-decoration: none;
-}
-
-.home-page .scroll-cue > span {
-    width: 28px;
-    height: 1px;
-    background: var(--home-accent);
-}
-
 .home-page .home-content {
     width: min(100% - 64px, 1200px);
     margin: 0 auto;
 }
 
 .home-page .showcase-section {
-    padding: 104px 0 96px;
+    padding: 50px 0 50px;
     border-bottom: 1px solid var(--home-line);
 }
 
@@ -345,16 +317,6 @@
 .home-page .culture-callout h2 em {
     color: #9b9690;
     font-style: normal;
-}
-
-.home-page .text-link {
-    display: inline-flex;
-    flex: 0 0 auto;
-    align-items: center;
-    padding-bottom: 7px;
-    color: #d1ccc6;
-    font-size: 12px;
-    text-decoration: none;
 }
 
 .home-page .brand-grid {
@@ -417,7 +379,7 @@
 }
 
 .home-page .car-section {
-    padding-top: 94px;
+    padding-top: 50px;
 }
 
 .home-page .section-note {
@@ -519,8 +481,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 36px;
-    margin: 72px 0 90px;
-    padding: 48px clamp(26px, 5vw, 64px);
+    margin: 32px 0 36px;
+    padding: 32px clamp(26px, 5vw, 64px);
     border: 1px solid var(--home-line);
     background:
         radial-gradient(ellipse at 90% 0%, rgba(238, 73, 59, 0.13), transparent 42%),
@@ -662,10 +624,6 @@
         width: 43vw;
     }
 
-    .home-page .scroll-cue {
-        left: 36px;
-    }
-
     .home-page .home-content,
     .home-page .footer-container {
         width: min(100% - 48px, 1200px);
@@ -738,11 +696,6 @@
         font-size: 8px;
     }
 
-    .home-page .scroll-cue {
-        bottom: 21px;
-        left: 24px;
-    }
-
     .home-page .home-content,
     .home-page .footer-container {
         width: calc(100% - 40px);
@@ -788,8 +741,8 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 24px;
-        margin: 44px 0 60px;
-        padding: 30px 22px;
+        margin: 24px 0 30px;
+        padding: 24px 18px;
     }
 
     .home-page .culture-links {
