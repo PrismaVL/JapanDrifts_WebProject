@@ -1,0 +1,122 @@
+.site-footer {
+    display: block;
+    width: 100%;
+    flex: 0 0 100%;
+    align-self: stretch;
+}
+
+.site-footer footer {
+    position: relative;
+    left: auto;
+    height: auto;
+    padding: 28px 0 20px;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+    background: #0c0d0e;
+    color: #aaa49d;
+}
+
+.site-footer .footer-container {
+    display: flex;
+    width: min(100% - 64px, 1200px);
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px 36px;
+}
+
+.site-footer .footer-column {
+    min-width: 0;
+    flex: 1 1 0;
+}
+
+.site-footer .footer-column h3 {
+    margin: 0 0 10px;
+}
+
+.site-footer .footer-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer .footer-logo {
+    display: flex;
+    flex: 0 0 90px;
+    justify-content: flex-end;
+}
+
+.site-footer .footer-column h3 {
+    color: #f4f1ec;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.site-footer .footer-column ul li {
+    color: #aaa49d;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.site-footer .footer-column ul li a {
+    color: #d8d2cb;
+    text-decoration: none;
+}
+
+.site-footer .footer-column ul li a:hover {
+    color: #ee493b;
+}
+
+.site-footer .footer-logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.site-footer .footer-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(100% - 64px, 1200px);
+    margin: 24px auto 0;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+    color: #77726c;
+}
+
+.site-footer .footer-info p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .site-footer .footer-container {
+        width: min(100% - 40px, 680px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .site-footer .footer-column,
+    .site-footer .footer-logo {
+        width: 100%;
+        flex: 0 0 auto;
+        margin: 0;
+        text-align: left;
+    }
+
+    .site-footer .footer-logo {
+        justify-content: flex-start;
+    }
+
+    .site-footer .footer-info {
+        width: min(100% - 40px, 680px);
+        flex-direction: column;
+        gap: 4px;
+    }
+}
