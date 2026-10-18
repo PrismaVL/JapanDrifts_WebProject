@@ -27,7 +27,7 @@
 .brand-page > main.brand-catalog {
     width: min(100% - 64px, 1320px);
     margin: 0 auto;
-    padding: clamp(18px, 2vw, 24px) 0 112px;
+    padding: clamp(18px, 2vw, 24px) 0 36px;
     background: transparent;
     color: var(--brand-text);
 }
@@ -455,7 +455,7 @@
 @media (max-width: 640px) {
     .brand-page > main.brand-catalog {
         width: calc(100% - 36px);
-        padding: 16px 0 60px;
+        padding: 16px 0 24px;
     }
 
     .brand-heading {
