@@ -313,7 +313,7 @@
 
 .essentials-page .featured-products {
     margin: 0;
-    padding: 76px 0;
+    padding: 30px 0;
     border: 0;
     border-bottom: 1px solid var(--essentials-line);
     background: transparent;
@@ -341,12 +341,6 @@
     letter-spacing: -0.055em;
     line-height: 1.1;
     text-shadow: none;
-}
-
-.essentials-page .essentials-section-heading > p {
-    margin: 0 0 5px;
-    color: var(--essentials-muted);
-    font-size: 12px;
 }
 
 .essentials-page .product-list {
