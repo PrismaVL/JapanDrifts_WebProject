@@ -176,8 +176,7 @@
 .faq-page .faq-item {
     position: relative;
     display: grid;
-    grid-template-columns: 54px minmax(0, 1fr);
-    column-gap: 13px;
+    grid-template-columns: minmax(0, 1fr);
     margin: 0;
     padding: 16px 18px 16px 8px;
     border-bottom: 1px solid var(--faq-line);
@@ -187,15 +186,6 @@
 
 .faq-page .faq-item:hover {
     background-color: rgba(238, 73, 59, 0.09);
-}
-
-.faq-page .faq-number {
-    grid-row: span 2;
-    padding-top: 4px;
-    color: var(--faq-accent);
-    font-family: "Courier New", Courier, monospace;
-    font-size: 10px;
-    letter-spacing: 0.08em;
 }
 
 .faq-page .faq-item h3 {
@@ -387,8 +377,7 @@
     }
 
     .faq-page .faq-item {
-        grid-template-columns: 34px minmax(0, 1fr);
-        column-gap: 7px;
+        grid-template-columns: minmax(0, 1fr);
         padding: 14px 5px;
     }
 
